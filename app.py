@@ -442,7 +442,7 @@ with col_lang_2:
 texts = TRANSLATIONS[selected_lang]
 
 st.markdown(
-    f"<h1 style='font-size:34px;margin-top: 0.2rem; margin-bottom:0.2rem;'>{texts['title']}</h1>",
+    f"<h1 style='font-size:34px; margin-bottom:0.2rem;'>{texts['title']}</h1>",
     unsafe_allow_html=True,
 )
 
