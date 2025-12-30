@@ -433,18 +433,21 @@ model = joblib.load(MODEL_PATH)
 # ------------------------------------------------------------------
 # Language Selector & Header
 # ------------------------------------------------------------------
-col_lang_1, col_lang_2 = st.columns([6, 1])
-with col_lang_2:
+col_header, col_lang = st.columns([5, 2])
+
+with col_lang:
+    # label_visibility="visible" yaptık ki mobilde ne olduğu anlaşılsın
     selected_lang = st.selectbox(
-        "Language / Dil", ["English", "Türkçe"], label_visibility="collapsed"
+        "Language / Dil", ["English", "Türkçe"], label_visibility="visible"
     )
 
 texts = TRANSLATIONS[selected_lang]
 
-st.markdown(
-    f"<h1 style='font-size:34px; margin-bottom:0.2rem;'>{texts['title']}</h1>",
-    unsafe_allow_html=True,
-)
+with col_header:
+    st.markdown(
+        f"<h1 style='font-size:34px; margin-bottom:0.2rem;'>{texts['title']}</h1>",
+        unsafe_allow_html=True,
+    )
 
 st.markdown(texts["intro"])
 
