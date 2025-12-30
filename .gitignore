@@ -1,1 +1,9 @@
-/.vscode
+# Python derleme dosyaları
+__pycache__/
+*.pyc
+
+# Test önbelleği
+.pytest_cache/
+
+# Editör ayarları (VS Code)
+.vscode/
