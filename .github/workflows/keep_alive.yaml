@@ -1,0 +1,15 @@
+name: Streamlit Uyanık Tut (Ping Only)
+
+on:
+  schedule:
+    # Her 4 saatte bir siteye sinyal gönderir
+    - cron: '0 */4 * * *'
+  workflow_dispatch:
+
+jobs:
+  ping_site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uygulamaya Ping At
+        # Aşağıdaki URL kısmına kendi Streamlit linkini yazmayı unutma!
+        run: curl https://kaganmart9-attrition-risk.streamlit.app/
